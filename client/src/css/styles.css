@@ -1,0 +1,414 @@
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+/* br {
+    display: block;
+    margin: 2px 0;
+  } */
+
+h1 {
+  color: #ebbc20;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+h1:hover {
+  color: #cca41e;
+}
+
+h2 {
+  color: #335be1;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-weight: 400;
+  font-size: 2rem;
+  position: relative;
+  margin: 7px 0px 0px 0px;
+
+  /* top: 12px; */
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+h4 {
+  color: #335be1;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+p {
+  color: #335be1;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+a {
+  color: #335be1;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+  margin-top: 0;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-weight: bold;
+}
+
+a:hover {
+  transition: all 0.25s ease;
+  color: #ebbc20;
+}
+
+.font1 {
+  font-family: "Georgia", serif;
+}
+
+.font2 {
+  font-family: "Bradley Hand", cursive;
+}
+.font3 {
+  font-family: "Trebuchet MS", sans-serif;
+}
+.font4 {
+  font-family: "Lucida Handwriting", cursive;
+}
+.font6 {
+  font-family: "Luminari", fantasy;
+}
+.font5 {
+  font-family: "Courier New", serif;
+}
+
+/* TOP NAVIGATION */
+.nav {
+  float: right;
+  padding: 60px 50px 0px 20px;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ebbc20;
+  text-decoration: none;
+  /* border: solid black; */
+}
+
+/* TOP LOGO */
+.logo-top {
+  min-width: 100px;
+  max-width: 240px;
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 45px;
+  /* border: solid black; */
+  transition: all 0.25s ease;
+}
+/* TOP/BOTTOM LOGO HOVER */
+.logo-top:hover,
+.logo-bottom:hover {
+  filter: brightness(80%);
+  transition: all 0.25s ease;
+}
+
+.logo-top:active,
+.logo-bottom:active {
+  filter: invert(100%) brightness(100%);
+  transition: all 0.25s ease;
+}
+
+/* BOTTOM LOGO */
+.logo-bottom {
+  width: 3rem;
+  height: auto;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  transition: all 0.25s ease;
+}
+
+/* || Grid */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-rows: 1.25fr 10fr 1fr;
+}
+.top {
+  position: relative;
+  grid-column: 1 / 3;
+
+  /* border: solid red; */
+}
+
+.center-left {
+  position: relative;
+  /* border: solid black; */
+  overflow-y: auto;
+  padding: 60px 20px 20px 60px;
+}
+
+.inner-left {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  padding: 0px 20px 0px 0px;
+}
+
+.center-right {
+  position: relative;
+  overflow-y: scroll;
+  /* border: solid purple; */
+}
+
+.bottom {
+  position: relative;
+  /* border: solid orange; */
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+/* Style the caret/arrow */
+.caret {
+  user-select: none; /* Prevent text selection */
+  transition: all 0.25s ease;
+  margin-left: -13px;
+}
+
+.caret:hover {
+  color: #cca41e;
+}
+.caret:active {
+  color: #335be1;
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\005E";
+  color: #c4a82d68;
+  display: inline-block;
+  margin-right: 6px;
+
+  transform: rotate(90deg);
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(180deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+  margin-left: -15px;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+.buttons {
+  color: #ebbc20;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+  transition: all 0.25s ease;
+  /* display: block; */
+}
+
+.buttons:hover,
+.nav:hover {
+  color: #cca41e;
+  cursor: default;
+  text-decoration: none;
+}
+
+.buttons:active,
+.nav:active {
+  color: #335be1;
+}
+
+ul,
+#myUL {
+  list-style-type: none;
+  color: #ebbc20;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+}
+
+/* client work grid formatting */
+/* .clients {
+    display: none;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    height: 100%;
+    max-height: 100%;
+  } */
+
+/* Content styling and functionality */
+.content {
+  display: none;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  /* border: solid purple; */
+  height: 100%;
+  max-height: 100%;
+}
+
+.content-top {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  /* border: solid orange; */
+  padding: 20px 0px 0px 0px;
+  position: relative;
+}
+
+.content-left {
+  /* border: solid red; */
+  grid-column: 1;
+  grid-row: 2 / 3;
+  position: relative;
+}
+
+.content-right {
+  /* border: solid yellow; */
+  grid-column: 2;
+  grid-row: 2 / 4;
+  padding: 0px 10% 20px 30px;
+
+  overflow-y: scroll;
+  position: relative;
+}
+
+.content-bottom {
+  /* border: solid green; */
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* red styling when needed */
+.red {
+  color: red;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  /* height: auto; */
+}
+
+/* bold markup for text elements */
+.bold {
+  font-weight: bold;
+}
+
+.construction {
+  width: 40px;
+  height: auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#album-art {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(16px 16px 10px rgba(187, 187, 187, 0.249));
+}
+
+#album-art-no {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(16px 16px 10px rgba(187, 187, 187, 0.249));
+}
+
+#album-art:hover {
+  position: relative;
+  max-width: 99.5%;
+  height: auto;
+  transition: all 0.25s ease;
+  filter: drop-shadow(16px 16px 10px rgba(187, 187, 187, 0.249)) blur(0.5px);
+  padding: 0px 0px 0.5% 0px;
+}
+
+#album-art:active {
+  position: relative;
+  max-width: 99.5%;
+  height: auto;
+  transition: all 0.25s ease;
+  filter: drop-shadow(16px 16px 10px rgba(187, 187, 187, 0.249)) blur(0.5px);
+  padding: 0px 0px 0.5% 0px;
+  filter: brightness(110%);
+}
+
+#streaming-icon {
+  width: 20px;
+  height: auto;
+  transition: all 0.25s ease;
+}
+
+#streaming-icon:hover {
+  filter: brightness(75%);
+}
+
+#streaming-icon:active {
+  filter: hue-rotate(180deg);
+}
+
+#pdf {
+  display: none;
+  height: 100%;
+  width: auto;
+}
+
+#scroll-indicator {
+  position: fixed;
+  background: #ebbc20;
+  width: 5%;
+  max-width: 50%;
+  height: 3px;
+  border: 1px solid black;
+}
+
+/* iframe {
+    display: block;
+  } */

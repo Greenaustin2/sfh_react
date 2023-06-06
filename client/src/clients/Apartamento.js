@@ -5,10 +5,16 @@ const Apartamento = () => {
         <h2>Apartamento</h2>
       </div>
       <div className="content-left">
-        <div style="padding:56.25% 0 0 0;position:relative;">
+        <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/560310218?h=e1e989406e"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen

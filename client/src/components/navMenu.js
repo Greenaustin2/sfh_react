@@ -1,20 +1,24 @@
-import TreeMenu from "react-simple-tree-menu";
 import { Route, Routes, Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import Apartamento from "../clients/Apartamento";
 import Dior from "../clients/Dior";
+import About from "../releases/About";
+import "../../node_modules/react-simple-tree-menu/dist/main.css";
+import TreeMenu from "react-simple-tree-menu";
+import TreeView from "@mui/lab/TreeView";
+import TreeItem from "@mui/lab/TreeItem";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const NavMenu = () => {
-  const navigate = useNavigate();
-
   const treeData = {
     releases: {
       label: "releases",
-      nodes: {
+      children: {
         all: {
           label: "all",
-          nodes: {
+          children: {
             helloMyFriends: {
               label: "_Hello My Friends",
               index: 16,
@@ -87,17 +91,17 @@ const NavMenu = () => {
         },
         audio: {
           label: "audio",
-          nodes: {},
+          children: {},
         },
         visual: {
           label: "visual",
-          nodes: {},
+          children: {},
         },
       },
     },
     clients: {
       label: "clients",
-      nodes: {
+      children: {
         vi_000: {
           label: "_VI_000",
           index: 0,
@@ -106,7 +110,7 @@ const NavMenu = () => {
     },
     about: {
       label: "about",
-      nodes: {
+      children: {
         vi_000: {
           label: "_VI_000",
           index: 0,
@@ -114,26 +118,125 @@ const NavMenu = () => {
       },
     },
   };
-  return (
-    // <TreeMenu
-    //   data={treeData}
-    //   hasSearch={false}
-    //   onClickItem={function populate({ ...props }) {
-    //     if (!props.hasNodes) {
-    //       navigate("/" + props.key);
-    //       console.log(props.key);
-    //     }
-    //   }}
-    // />
-    <>
-      <Link to="/circle">Apartamento</Link>
-      <Link to="/square">Dior</Link>
 
-      <Routes>
-        <Route path="/circle" element={<Apartamento />} />
-        <Route path="/square" element={<Dior />} />
-      </Routes>
-    </>
+  const treeDataList = [
+    {
+      id: "releases",
+      label: "releases",
+      nodeId: "1",
+      children: [
+        {
+          id: "all",
+          label: "all",
+          nodeId: "4",
+          children: [
+            {
+              id: "hmf",
+              label: "_Hello My Friends",
+              href: "/hello_my_friends",
+              nodeId: "7",
+              children: [],
+            },
+          ],
+        },
+        {
+          id: "audio",
+          label: "audio",
+          nodeId: "5",
+          children: [
+            {
+              id: "hmf",
+              label: "_Hello My Friends",
+              href: "/hello_my_friends",
+              nodeId: "9",
+              children: [],
+            },
+            {
+              id: "exeter",
+              label: "_Exeter (unfinished randoms",
+              href: "/exeter",
+              nodeId: "8",
+              children: [],
+            },
+          ],
+        },
+        {
+          id: "visual",
+          label: "visual",
+          nodeId: "6",
+          children: [
+            {
+              id: "wpb",
+              label: "_Watched Pot Boils",
+              href: "/watched_pot_boils",
+              nodeId: "11",
+              children: [],
+            },
+            {
+              id: "kxlu",
+              label: "_SFH_KXLU_YYYY-mm-dd",
+              href: "/SFH_KXLU_YYYY-mm-dd",
+              nodeId: "10",
+              children: [],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "clients",
+      label: "clients",
+      nodeId: "2",
+      children: [
+        {
+          id: "apartamento",
+          label: "apartamento",
+          href: "/apartamento",
+          nodeId: "12",
+          children: [],
+        },
+      ],
+    },
+    {
+      id: "about",
+      label: "about",
+      href: "about",
+      nodeId: "3",
+      children: [],
+    },
+  ];
+  const handleClick = (node) => {
+    console.log(node);
+  };
+  const getTreeItemsFromData = (treeDataList) => {
+    return treeDataList.map((treeItemData) => {
+      let children = undefined;
+      if (treeItemData.children && treeItemData.children.length > 0) {
+        children = getTreeItemsFromData(treeItemData.children);
+      }
+      return (
+        <TreeItem
+          key={treeItemData.id}
+          nodeId={treeItemData.nodeId}
+          label={treeItemData.label}
+          children={children}
+          onIconClick={handleClick(treeItemData.label)}
+        />
+      );
+    });
+  };
+  const DataTreeView = ({ treeDataList }) => {
+    return (
+      <div>
+        <TreeView>{getTreeItemsFromData(treeDataList)}</TreeView>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <DataTreeView treeDataList={treeDataList} />
+    </div>
   );
 };
 

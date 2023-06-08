@@ -1,11 +1,20 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import headerLogo from "./images/logos/full_logo.png";
 import footerLogo from "./images/logos/sflogo.png";
 import NavMenu from "./components/navMenu";
-// import "./css/styles.css";
+import Apartamento from "./clients/Apartamento";
+import Dior from "./clients/Dior";
+import Content from "./components/content";
+import "./css/styles.css";
+import BarTreeView from "./components/navMenuAlt";
 
 const App = () => {
+  const [contentState, setContentState] = useState();
+  const handleClick = (data) => {
+    setContentState(data);
+    console.log("data" + data);
+  };
   return (
     <div className="container">
       <div className="top">
@@ -14,7 +23,8 @@ const App = () => {
         </a>
       </div>
       <div className="center-left">
-        <NavMenu />
+        {/* <NavMenu handleClick={handleClick} /> */}
+        <BarTreeView />
       </div>
       <div className="center-right"></div>
       <div className="bottom">

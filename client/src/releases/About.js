@@ -1,15 +1,18 @@
+import cardImage from "../images/logos/sfcard.png";
+import "../css/styles.css";
+
 const About = () => {
   return (
     <div className="content" id="about">
-      <div clasName="content-top">
+      <div className="content-top">
         <h2>
-          <span class="font1">VI</span> <span className="font2">VI</span>{" "}
+          <span className="font1">VI</span> <span className="font2">VI</span>{" "}
           <span className="font3">VI</span> <span className="font4">VI</span>{" "}
           <span className="font5">VI</span> <span className="font6">VI</span>
         </h2>
       </div>
       <div className="content-left">
-        <img id="album-art-no" src="images/sfcard.png" />
+        <img id="album-art-no" src={cardImage} />
       </div>
       <div className="content-right">
         <p>
@@ -25,7 +28,7 @@ const About = () => {
           <a href="mailto:vi@sixfingerhand.xyz">vi@sixfingerhand.xyz</a>
         </p>
       </div>
-      <div class="content-bottom"></div>
+      <div className="content-bottom"></div>
     </div>
   );
 };

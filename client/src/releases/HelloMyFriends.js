@@ -1,3 +1,14 @@
+import hmfCover from "../images/016-hmf/hmf-cover.jpg";
+import hmf1 from "../images/016-hmf/hmf-1.jpg";
+import hmf2 from "../images/016-hmf/hmf-2.jpg";
+import hmf3 from "../images/016-hmf/hmf-3.jpg";
+import hmf4 from "../images/016-hmf/hmf-4.jpg";
+import hmf5 from "../images/016-hmf/hmf-5.jpg";
+import hmf6 from "../images/016-hmf/hmf-6.jpg";
+import hmf7 from "../images/016-hmf/hmf-7.jpg";
+import hmf8 from "../images/016-hmf/hmf-8.jpg";
+import hmf9 from "../images/016-hmf/hmf-9.jpg";
+
 const HelloMyFriends = () => {
   return (
     <div class="content" id="hmf">
@@ -9,7 +20,7 @@ const HelloMyFriends = () => {
           data-fslightbox="hmf"
           href="images/016_hello-my-friends/hmf-cover.jpg"
         >
-          <img id="album-art" src="images/016_hello-my-friends/hmf-cover.jpg" />
+          <img id="album-art" src={hmfCover} />
         </a>{" "}
         <a
           data-fslightbox="hmf"

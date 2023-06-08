@@ -1,3 +1,6 @@
+import flagImage from "../images/009-deconstructed-flag/deconstructed-flag1.jpg";
+// import flagImage2 from "../images/009-deconstructed-flag/deconstructed-flag2.jpg";
+
 const DeconstructedFlag = () => {
   return (
     <div className="content" id="df">
@@ -9,10 +12,7 @@ const DeconstructedFlag = () => {
           data-fslightbox="df"
           href="images/009_deconstructed-flag/deconstructed-flag1.jpg"
         >
-          <img
-            id="album-art"
-            src="images/009_deconstructed-flag/deconstructed-flag1.jpg"
-          />
+          <img id="album-art" src={flagImage} />
         </a>
       </div>
       <div className="content-right">

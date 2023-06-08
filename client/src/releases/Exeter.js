@@ -1,3 +1,6 @@
+import albumCoverFront from "../images/015-exeter/ext-front.jpg";
+import albumCoverBack from "../images/015-exeter/ext-back.jpg";
+
 const Exeter = () => {
   return (
     <div className="content" id="ext">
@@ -6,7 +9,7 @@ const Exeter = () => {
       </div>
       <div className="content-left">
         <a data-fslightbox="ext" href="images/015_exeter/ext-front.jpg">
-          <img id="album-art" src="images/015_exeter/ext-front.jpg" />
+          <img id="album-art" src={albumCoverFront} />
         </a>
         <a data-fslightbox="ext" href="images/015_exeter/ext-back.jpg"></a>
       </div>

@@ -273,7 +273,6 @@ ul,
 
 /* Content styling and functionality */
 .content {
-  display: none;
   position: relative;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;

@@ -1,3 +1,7 @@
+import albumCover from "../images/006-01/01-cover1.jpg";
+import albumCover2 from "../images/006-01/01-cover2.jpg";
+import * as Images from "../images/index";
+
 const DigitalMusic = () => {
   return (
     <div className="content" id="01">
@@ -6,7 +10,7 @@ const DigitalMusic = () => {
       </div>
       <div className="content-left">
         <a data-fslightbox="01" href="images/006_01/01-cover1.jpg">
-          <img id="album-art" src="images/006_01/01-cover1.jpg" />
+          <img id="album-art" src={albumCover} />
         </a>
         <a data-fslightbox="01" href="images/006_01/01-cover2.jpg"></a>
         <a data-fslightbox="01" href="https://youtu.be/6msE-Qw0mho"></a>
@@ -41,22 +45,19 @@ const DigitalMusic = () => {
           href="https://open.spotify.com/album/5OAAlUyd4BlhiPWQK2x6Z4?si=XKuENKP-R4eRVs7hPahrgw"
           target="_blank"
         >
-          <img id="streaming-icon" src="images/streaming-icons/spotify.png" />
+          <img id="streaming-icon" src={Images.spotify} />
         </a>
         <a
           href="https://music.apple.com/us/album/01101101-01110101-01110011-01101001-01100011/1229309545"
           target="_blank"
         >
-          <img id="streaming-icon" src="images/streaming-icons/apple.png" />
+          <img id="streaming-icon" src={Images.appleMusic} />
         </a>
         <a
           href="https://music.youtube.com/playlist?list=OLAK5uy_krNuNcf7JRCnPJT9D7-geyK_xm_Rl2iD0&feature=share"
           target="_blank"
         >
-          <img
-            id="streaming-icon"
-            src="images/streaming-icons/youtube-music.png"
-          />
+          <img id="streaming-icon" src={Images.youtubeMusic} />
         </a>
       </div>
     </div>

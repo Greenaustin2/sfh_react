@@ -1,3 +1,6 @@
+import * as Images from "../images/index";
+import albumCover from "../images/014-collection-of-music/com_art.jpg";
+
 const CollectionOfMusic = () => {
   return (
     <div className="content" id="com">
@@ -9,10 +12,7 @@ const CollectionOfMusic = () => {
           data-fslightbox="com"
           href="images/014_collection-of-music/com_art.jpg"
         >
-          <img
-            id="album-art"
-            src="images/014_collection-of-music/com_art.jpg"
-          />
+          <img id="album-art" src={albumCover} />
         </a>
         <a data-fslightbox="com" href="https://youtu.be/1Zz3YMT2HQc"></a>
       </div>
@@ -70,11 +70,7 @@ const CollectionOfMusic = () => {
           href="https://open.spotify.com/album/1zsJrZ3hAvWJlexfU2p4lQ?si=WAf4z0T7RTWM9UB-6CZisw"
           target="_blank"
         >
-          <img
-            id="streaming-icon"
-            src="images/streaming-icons/spotify.png"
-            alt="spotify icon"
-          />
+          <img id="streaming-icon" src={Images.spotify} alt="spotify icon" />
         </a>
         <a
           href="https://music.apple.com/us/album/collection-of-music/1459223243"
@@ -82,7 +78,7 @@ const CollectionOfMusic = () => {
         >
           <img
             id="streaming-icon"
-            src="images/streaming-icons/apple.png"
+            src={Images.appleMusic}
             alt="apple music icon"
           />
         </a>
@@ -92,7 +88,7 @@ const CollectionOfMusic = () => {
         >
           <img
             id="streaming-icon"
-            src="images/streaming-icons/youtube-music.png"
+            src={Images.youtubeMusic}
             alt="youtube music icon"
           />
         </a>

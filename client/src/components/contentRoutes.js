@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import * as Releases from "../releases/index";
-import * as Client from "../clients/index";
+import * as Releases from "../scenes/index";
+import * as Client from "../scenes/clients/index";
 
 const ContentRoutes = () => {
   return (

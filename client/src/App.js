@@ -3,25 +3,25 @@ import headerLogo from "./images/logos/full_logo.png";
 import footerLogo from "./images/logos/sflogo.png";
 import BarTreeView from "./components/navMenu";
 import ContentRoutes from "./components/contentRoutes";
-import "./css/styles.css";
+import s from "./css/styles.module.css";
 
 const App = () => {
   return (
-    <div className="container">
-      <div className="top">
-        <a href="/" className="image-link">
-          <img className="logo-top" src={headerLogo} alt="Hand Logo" />
+    <div className={s.container}>
+      <div className={s.top}>
+        <a href="/" className={s.imageLink}>
+          <img className={s.logoTop} src={headerLogo} alt="Hand Logo" />
         </a>
       </div>
-      <div className="center-left">
+      <div className={s.centerLeft}>
         <BarTreeView />
       </div>
-      <div className="center-right">
+      <div className={s.centerRight}>
         <ContentRoutes />
       </div>
-      <div className="bottom">
-        <a href="/" className="image-link">
-          <img className="logo-bottom" src={footerLogo} alt="Hand Logo" />
+      <div className={s.bottom}>
+        <a href="/" className={s.imageLink}>
+          <img className={s.logoBottom} src={footerLogo} alt="Hand Logo" />
         </a>
       </div>
     </div>

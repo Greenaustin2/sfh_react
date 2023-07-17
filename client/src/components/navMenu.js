@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState } from "react";
 import PropTypes from "prop-types";
 import { styled, alpha } from "@mui/material/styles";
 import TreeView from "@mui/lab/TreeView";
@@ -9,6 +8,7 @@ import TreeItem, { useTreeItem } from "@mui/lab/TreeItem";
 import clsx from "clsx";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router";
+import s from "../css/global.module.css";
 
 const CustomContentRoot = styled("div")(({ theme }) => ({
   WebkitTapHighlightColor: "transparent",
@@ -168,7 +168,7 @@ const getTreeItemsFromData = (treeDataList) => {
         nodeId={treeItemData.nodeId}
         label={treeItemData.label}
         children={children}
-        className="buttons"
+        className={s.buttons}
         ContentProps={{ href: treeItemData.href }}
         // onClick={console.log(props.label)}
       />

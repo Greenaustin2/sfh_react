@@ -1,0 +1,160 @@
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+/* br {
+      display: block;
+      margin: 2px 0;
+    } */
+
+h1 {
+  color: #ebbc20;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+h1:hover {
+  color: #cca41e;
+}
+
+h2 {
+  color: #335be1;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-weight: 400;
+  font-size: 2rem;
+  position: relative;
+  margin: 7px 0px 0px 0px;
+
+  /* top: 12px; */
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+h4 {
+  color: #335be1;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+p {
+  color: #335be1;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+a {
+  color: #335be1;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+  margin-top: 0;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-weight: bold;
+}
+
+a:hover {
+  transition: all 0.25s ease;
+  color: #ebbc20;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-rows: 1.25fr 10fr 1fr;
+}
+
+.top {
+  position: relative;
+  grid-column: 1 / 3;
+
+  /* border: solid red; */
+}
+
+.centerLeft {
+  position: relative;
+  overflow-y: auto;
+  padding: 60px 20px 20px 60px;
+}
+
+.centerRight {
+  position: relative;
+  overflow-y: scroll;
+}
+
+.bottom {
+  position: relative;
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+.logoTop {
+  min-width: 100px;
+  max-width: 240px;
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 45px;
+  transition: all 0.25s ease;
+}
+
+.logoBottom {
+  width: 3rem;
+  height: auto;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  transition: all 0.25s ease;
+}
+
+.logo-top:hover,
+.logo-bottom:hover {
+  filter: brightness(80%);
+  transition: all 0.25s ease;
+}
+
+.logo-top:active,
+.logo-bottom:active {
+  filter: invert(100%) brightness(100%);
+  transition: all 0.25s ease;
+}
+
+.nav {
+  float: right;
+  padding: 60px 50px 0px 20px;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ebbc20;
+  text-decoration: none;
+  /* border: solid black; */
+}
+
+/* tree menu styling */
+.buttons {
+  color: #ebbc20;
+  font-family: "Lucida Console", monospace;
+  font-size: 0.75rem;
+  transition: all 0.25s ease;
+  /* display: block; */
+}

@@ -144,17 +144,10 @@ a:hover {
 /* tree menu styling */
 .buttons {
   color: #ebbc20;
-  font-family: "Lucida Console", monospace;
-  font-size: 0.75rem;
-  transition: all 0.25s ease;
-}
-
-.buttons {
-  color: #ebbc20;
-  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
-    Bitstream Vera Sans Mono, monospace;
-  font-size: 0.75rem;
-  transition: all 0.25s ease;
+  /* font-family: "Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace";
+  font-size: 0.75rem; */
+  transition: all 0.1s ease;
+  user-select: "none";
 }
 
 .buttons:hover,
@@ -223,11 +216,9 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:
-      80px minmax(calc(30vh - 65px), max-content) minmax(
-        calc(70vh - 65px),
-        max-content
-      )
-      50px;
+      80px
+      minmax(calc(30vh - 65px), max-content)
+      minmax(calc(70vh - 65px), max-content) 50px;
     /* grid-template-rows: 80px auto auto 50px; */
   }
   .top {
@@ -238,7 +229,7 @@ a:hover {
   .centerLeft {
     position: relative;
     padding: 60px 20px 20px 40px;
-
+    /* overflow-y: visible; */
     /* border: solid black; */
 
     grid-row: 2;

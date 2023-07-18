@@ -10,58 +10,7 @@ import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router";
 import s from "../css/global.module.css";
 
-const CustomContentRoot = styled("div")(({ theme }) => ({
-  WebkitTapHighlightColor: "transparent",
-  "&:hover, &.Mui-disabled, &.Mui-focused, &.Mui-selected, &.Mui-selected.Mui-focused, &.Mui-selected:hover":
-    {
-      backgroundColor: "transparent",
-    },
-  [`& .MuiTreeItem-contentBar`]: {
-    position: "absolute",
-    width: "100%",
-    height: 24,
-    left: 0,
-    "&:hover &": {
-      backgroundColor: theme.palette.action.hover,
-      // Reset on touch devices, it doesn't add specificity
-      "@media (hover: none)": {
-        backgroundColor: "transparent",
-      },
-    },
-    "&.Mui-disabled &": {
-      opacity: theme.palette.action.disabledOpacity,
-      backgroundColor: "transparent",
-    },
-    "&.Mui-focused &": {
-      backgroundColor: theme.palette.action.focus,
-    },
-    "&.Mui-selected &": {
-      backgroundColor: alpha(
-        theme.palette.primary.main,
-        theme.palette.action.selectedOpacity
-      ),
-    },
-    "&.Mui-selected:hover &": {
-      backgroundColor: alpha(
-        theme.palette.primary.main,
-        theme.palette.action.selectedOpacity + theme.palette.action.hoverOpacity
-      ),
-      // Reset on touch devices, it doesn't add specificity
-      "@media (hover: none)": {
-        backgroundColor: alpha(
-          theme.palette.primary.main,
-          theme.palette.action.selectedOpacity
-        ),
-      },
-    },
-    "&.Mui-selected.Mui-focused &": {
-      backgroundColor: alpha(
-        theme.palette.primary.main,
-        theme.palette.action.selectedOpacity + theme.palette.action.focusOpacity
-      ),
-    },
-  },
-}));
+const CustomContentRoot = styled("div")(({ theme }) => ({}));
 
 const CustomContent = React.forwardRef(function CustomContent(props, ref) {
   const navigate = useNavigate();
@@ -101,19 +50,26 @@ const CustomContent = React.forwardRef(function CustomContent(props, ref) {
 
   return (
     <CustomContentRoot
-      className={clsx(className, classes.root, {
-        "Mui-expanded": expanded,
-        "Mui-selected": selected,
-        "Mui-focused": focused,
-        "Mui-disabled": disabled,
-      })}
+      className={clsx(className)}
       onClick={handleClick}
       onMouseDown={handleMouseDown}
       ref={ref}
+      style={{
+        backgroundColor: "transparent",
+      }}
     >
       <div className="MuiTreeItem-contentBar" />
       <div className={classes.iconContainer}>{icon}</div>
-      <Typography component="div" className={classes.label}>
+      <Typography
+        component="div"
+        className={classes.label}
+        style={{
+          fontFamily:
+            "Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace",
+          fontSize: ".75rem",
+          userSelect: "none",
+        }}
+      >
         {label}
       </Typography>
     </CustomContentRoot>

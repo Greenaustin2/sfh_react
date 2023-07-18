@@ -1,22 +1,23 @@
 import albumCoverOne from "./wpb-cover1.jpg";
 import albumCoverTwo from "./wpb-cover2.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import s from "../../../css/content.module.css";
 
 const WatchedPot = () => {
   return (
-    <div className="content" id="wpb">
-      <div className="content-top">
+    <div className={s.content} id="wpb">
+      <div className={s.contentTop}>
         <h2 className="stretch">Watched Pot Boils</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover" id="album-art" src={albumCoverOne} />
+      <div className={s.contentLeft}>
+        <img alt="album cover" id={s.albumArt} src={albumCoverOne} />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           An encapsulated year in NY.
           <br />
           <br />
-          <span className="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_Stay Indoors
           <br />
@@ -29,7 +30,7 @@ const WatchedPot = () => {
           05_Alright Now
           <br />
           <br />
-          <span className="bold">INSTRUMENTATION</span>
+          <span style={{ fontWeight: "bold" }}>INSTRUMENTATION</span>
           <br />
           Lucida classical guitar
           <br />
@@ -59,7 +60,7 @@ const WatchedPot = () => {
           VI_014
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:

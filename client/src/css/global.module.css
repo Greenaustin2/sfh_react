@@ -7,11 +7,6 @@ body {
   overflow: hidden;
 }
 
-/* br {
-      display: block;
-      margin: 2px 0;
-    } */
-
 h1 {
   color: #ebbc20;
   font-family: "Univers LT Std", sans-serif;
@@ -34,8 +29,6 @@ h2 {
   font-size: 2rem;
   position: relative;
   margin: 7px 0px 0px 0px;
-
-  /* top: 12px; */
 }
 
 img {
@@ -85,14 +78,13 @@ a:hover {
 .top {
   position: relative;
   grid-column: 1 / 3;
-
-  /* border: solid red; */
 }
 
 .centerLeft {
   position: relative;
   overflow-y: auto;
   padding: 60px 20px 20px 60px;
+  /* border: solid red; */
 }
 
 .centerRight {
@@ -147,7 +139,6 @@ a:hover {
   font-size: 1rem;
   color: #ebbc20;
   text-decoration: none;
-  /* border: solid black; */
 }
 
 /* tree menu styling */
@@ -156,5 +147,172 @@ a:hover {
   font-family: "Lucida Console", monospace;
   font-size: 0.75rem;
   transition: all 0.25s ease;
-  /* display: block; */
+}
+
+.buttons {
+  color: #ebbc20;
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+  font-size: 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.buttons:hover,
+.nav:hover {
+  color: #cca41e;
+  cursor: default;
+  text-decoration: none;
+}
+
+.buttons:active,
+.nav:active {
+  color: #335be1;
+}
+
+@media (max-width: 578px) {
+  body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    background-color: #f9f9f9;
+    overflow: visible;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #335be1;
+  }
+
+  p {
+    color: #335be1;
+    font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+      Bitstream Vera Sans Mono, monospace;
+    font-size: 0.7rem;
+  }
+
+  .logoTop {
+    min-width: 100px;
+    max-width: 240px;
+    width: 125px;
+    height: auto;
+
+    position: absolute;
+    bottom: 0px;
+    left: 25px;
+    /* border: solid black; */
+  }
+
+  .nav {
+    float: right;
+    padding: 50px 30px 0px 10px;
+    font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+      Bitstream Vera Sans Mono, monospace;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #ebbc20;
+    text-decoration: none;
+    /* border: solid black; */
+    /* position: relative; */
+  }
+
+  /* main grid styling */
+  .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      80px minmax(calc(30vh - 65px), max-content) minmax(
+        calc(70vh - 65px),
+        max-content
+      )
+      50px;
+    /* grid-template-rows: 80px auto auto 50px; */
+  }
+  .top {
+    position: relative;
+    grid-column: 1;
+    /* border: solid red; */
+  }
+  .centerLeft {
+    position: relative;
+    padding: 60px 20px 20px 40px;
+
+    /* border: solid black; */
+
+    grid-row: 2;
+  }
+  .innerLeft {
+    position: absolute;
+    left: 70px;
+    top: 20px;
+    /* border: solid green; */
+  }
+  .centerRight {
+    /* display: grid; */
+    position: relative;
+    overflow-y: scroll;
+    grid-row: 3;
+    /* scrollbar-width: none; */
+    /* border: solid blue; */
+    /* grid-template-columns: 1fr, 1fr;
+        grid-template-rows: 1fr, 10fr, 1fr; */
+  }
+  .bottom {
+    position: relative;
+    /* border: solid orange; */
+    grid-row: 4;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  h2 {
+    font-size: 1.5rem;
+    color: #335be1;
+  }
+  p {
+    font-size: 0.7rem;
+    /* padding: 0px 20px 0px 0px; */
+  }
+
+  .logoTop {
+    min-width: 100px;
+    max-width: 240px;
+    width: 125px;
+    height: auto;
+
+    position: absolute;
+    bottom: 0px;
+    left: 25px;
+    /* border: solid black; */
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 10fr 1fr;
+  }
+
+  .top {
+    position: relative;
+    grid-column: 1 / 3;
+    /* border: solid red; */
+  }
+
+  .centerRight {
+    position: relative;
+    overflow-y: scroll;
+    /* height: max-content; */
+    /* border: solid blue; */
+  }
+
+  .centerLeft {
+    position: relative;
+    /* border: solid black; */
+    overflow-y: auto;
+    padding: 60px 20px 20px 40px;
+  }
 }

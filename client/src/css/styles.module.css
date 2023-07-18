@@ -1,4 +1,4 @@
-body {
+/* body {
   min-height: 100vh;
   width: 100vw;
   margin: 0;
@@ -65,7 +65,7 @@ a {
 a:hover {
   transition: all 0.25s ease;
   color: #ebbc20;
-}
+} */
 
 .font1 {
   font-family: "Georgia", serif;
@@ -88,7 +88,7 @@ a:hover {
 }
 
 /* TOP NAVIGATION */
-.nav {
+/* .nav {
   float: right;
   padding: 60px 50px 0px 20px;
   font-family: Lucida Console, Lucida Sans Typewriter, monaco,
@@ -97,10 +97,8 @@ a:hover {
   font-size: 1rem;
   color: #ebbc20;
   text-decoration: none;
-  /* border: solid black; */
-}
-
-/* TOP LOGO */
+} */
+/* 
 .logo-top {
   min-width: 100px;
   max-width: 240px;
@@ -111,7 +109,6 @@ a:hover {
   left: 45px;
   transition: all 0.25s ease;
 }
-/* TOP/BOTTOM LOGO HOVER */
 .logo-top:hover,
 .logo-bottom:hover {
   filter: brightness(80%);
@@ -124,7 +121,6 @@ a:hover {
   transition: all 0.25s ease;
 }
 
-/* BOTTOM LOGO */
 .logo-bottom {
   width: 3rem;
   height: auto;
@@ -132,10 +128,10 @@ a:hover {
   right: 5%;
   top: 10%;
   transition: all 0.25s ease;
-}
+} */
 
 /* || Grid */
-.container {
+/* .container {
   width: 100%;
   height: 100vh;
   display: grid;
@@ -151,7 +147,7 @@ a:hover {
   position: relative;
   overflow-y: auto;
   padding: 60px 20px 20px 60px;
-}
+} */
 
 .inner-left {
   position: absolute;
@@ -160,7 +156,7 @@ a:hover {
   padding: 0px 20px 0px 0px;
 }
 
-.center-right {
+/* .center-right {
   position: relative;
   overflow-y: scroll;
 }
@@ -169,11 +165,10 @@ a:hover {
   position: relative;
   grid-column: 1 / 3;
   grid-row: 3;
-}
+} */
 
-/* Style the caret/arrow */
 .caret {
-  user-select: none; /* Prevent text selection */
+  user-select: none;
   transition: all 0.25s ease;
   margin-left: -13px;
 }
@@ -185,7 +180,6 @@ a:hover {
   color: #335be1;
 }
 
-/* Create the caret/arrow with a unicode, and style it */
 .caret::before {
   content: "\005E";
   color: #c4a82d68;
@@ -195,23 +189,20 @@ a:hover {
   transform: rotate(90deg);
 }
 
-/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
 .caret-down::before {
   transform: rotate(180deg);
 }
 
-/* Hide the nested list */
 .nested {
   display: none;
   margin-left: -15px;
 }
 
-/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
 .active {
   display: block;
 }
 
-.buttons {
+/* .buttons {
   color: #ebbc20;
   font-family: Lucida Console, Lucida Sans Typewriter, monaco,
     Bitstream Vera Sans Mono, monospace;
@@ -229,7 +220,7 @@ a:hover {
 .buttons:active,
 .nav:active {
   color: #335be1;
-}
+} */
 
 ul,
 #myUL {
@@ -240,7 +231,6 @@ ul,
   font-size: 0.75rem;
 }
 
-/* Remove margins and padding from the parent ul */
 #myUL {
   margin: 0;
   padding: 0.25rem;
@@ -258,7 +248,7 @@ ul,
 }
 
 /* Content styling and functionality */
-.content {
+/* .content {
   position: relative;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;
@@ -290,7 +280,7 @@ ul,
 .content-bottom {
   grid-column: 1;
   grid-row: 3;
-}
+} */
 
 /* red styling when needed */
 .red {
@@ -326,7 +316,7 @@ ul,
   height: 100%;
 }
 
-#album-art {
+/* #album-art {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -371,7 +361,7 @@ ul,
 
 #streaming-icon:active {
   filter: hue-rotate(180deg);
-}
+} */
 
 #pdf {
   display: none;

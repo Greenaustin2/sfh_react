@@ -3,7 +3,7 @@ import headerLogo from "./images/logos/full_logo.png";
 import footerLogo from "./images/logos/sflogo.png";
 import BarTreeView from "./components/navMenu";
 import ContentRoutes from "./components/contentRoutes";
-import s from "./css/styles.module.css";
+import s from "./css/global.module.css";
 
 const App = () => {
   return (

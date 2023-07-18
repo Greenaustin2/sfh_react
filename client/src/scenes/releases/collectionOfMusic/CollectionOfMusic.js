@@ -1,7 +1,6 @@
-import { useState } from "react";
 import albumCover from "./com_art.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
-import s from "../../../css/styles.module.css";
+import s from "../../../css/content.module.css";
 
 const CollectionOfMusic = () => {
   return (
@@ -61,16 +60,18 @@ const CollectionOfMusic = () => {
           VI_014
         </p>
       </div>
-      <StreamingIcons
-        urls={{
-          spotify:
-            "https://open.spotify.com/album/1zsJrZ3hAvWJlexfU2p4lQ?si=ShoRGpJkSOygieVyA1yQlg",
-          youtubeMusic:
-            "https://music.youtube.com/playlist?list=OLAK5uy_nmM3k7U50VcuaxcImkR_7WRsVfz6jQvPw&feature=share",
-          appleMusic:
-            "https://music.apple.com/us/album/collection-of-music/1459223243",
-        }}
-      />
+      <div className={s.contentBottom}>
+        <StreamingIcons
+          urls={{
+            spotify:
+              "https://open.spotify.com/album/1zsJrZ3hAvWJlexfU2p4lQ?si=ShoRGpJkSOygieVyA1yQlg",
+            youtubeMusic:
+              "https://music.youtube.com/playlist?list=OLAK5uy_nmM3k7U50VcuaxcImkR_7WRsVfz6jQvPw&feature=share",
+            appleMusic:
+              "https://music.apple.com/us/album/collection-of-music/1459223243",
+          }}
+        />
+      </div>
     </div>
   );
 };

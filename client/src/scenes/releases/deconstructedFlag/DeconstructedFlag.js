@@ -1,4 +1,6 @@
 import flagImage from "./deconstructed-flag1.jpg";
+import s from "../../../css/content.module.css";
+
 // import flagImage2 from "../images/009-deconstructed-flag/deconstructed-flag2.jpg";
 
 const DeconstructedFlag = () => {

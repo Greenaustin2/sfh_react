@@ -162,10 +162,6 @@ a:hover {
   color: #335be1;
 }
 
-.fslightbox-slide-number-container {
-  display: none !important;
-}
-
 @media (max-width: 578px) {
   body {
     min-height: 100vh;
@@ -262,7 +258,7 @@ a:hover {
   }
 }
 
-@media (min-width: 576px) and (max-width: 1024px) {
+@media (min-width: 578px) and (max-width: 1024px) {
   h2 {
     font-size: 1.5rem;
     color: #335be1;

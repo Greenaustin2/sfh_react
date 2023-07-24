@@ -1,4 +1,5 @@
 import FsLightbox from "fslightbox-react";
+import "../css/lightbox.css";
 
 const Lightbox = ({ sources, types, toggle }) => {
   console.log(sources);

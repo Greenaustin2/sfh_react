@@ -1,0 +1,22 @@
+.fslightbox-slide-number-container {
+  display: none;
+}
+
+/* .fslightbox-container {
+  background: #ebbc20;
+  mix-blend-mode: difference;
+} */
+
+/* 
+.fslightboxs *:not(.fslightbox-absoluted) {
+  background: #ebbc20;
+  mix-blend-mode: difference;
+} */
+
+/* .fslightbox-container *:not(.fslightboxs) {
+  mix-blend-mode: none;
+} */
+/* 
+.fslightboxs {
+  mix-blend-mode: normal;
+} */

@@ -1,11 +1,13 @@
+import s from "../../css/content.module.css";
+
 const NyMag = () => {
   return (
-    <div className="content" id="nym">
-      <div className="content-top">
+    <div className={s.content} id="nym">
+      <div className={s.contentTop}>
         <h2>New York Magazine</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             className="youtube-video"
             width="560"
@@ -18,7 +20,7 @@ const NyMag = () => {
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           What it's like to be a New York City delivery worker.
           <br />
@@ -39,7 +41,7 @@ const NyMag = () => {
           .
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <p>
           <br></br>
           Original score by Six Finger Hand

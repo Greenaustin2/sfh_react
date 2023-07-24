@@ -1,19 +1,28 @@
-import albumCoverOne from "./kxlu-front.jpg";
-import albumCoverTwo from "./kxlu-back.jpg";
-import albumCoverThree from "./kxlu-kw.jpg";
+import albumCover1 from "./kxlu-front.jpg";
+import albumCover2 from "./kxlu-back.jpg";
+import albumCover3 from "./kxlu-kw.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const Kxlu = () => {
+const Kxlu = (props) => {
+  const sources = [albumCover1, albumCover2, albumCover3];
+  const types = ["image", "image", "image"];
   return (
-    <div className="content" id="sfh">
-      <div className="content-top">
+    <div className={s.content} id="sfh">
+      <div className={s.contentTop}>
         <h2>SFH_KXLU_YYYY-mm-dd</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover art" id="album-art" src={albumCoverOne} />
+      <div className={s.contentLeft}>
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
 
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           This is a compilation of released and unreleased material arranged by
           Six Finger Hand for live br /oadcast.
@@ -27,7 +36,7 @@ const Kxlu = () => {
           <br />
           <br />
           <br />
-          <span className="bold">(Tracks 1-3)</span>
+          <span style={{ fontWeight: "bold" }}>(Tracks 1-3)</span>
           <br />
           December 14th, 2017
           <br />
@@ -40,7 +49,7 @@ const Kxlu = () => {
           Los Angeles, CA 90045
           <br />
           <br />
-          <span className="bold">(Tracks 1-4)</span>
+          <span style={{ fontWeight: "bold" }}>(Tracks 1-4)</span>
           <br />
           January 23rd, 2018
           <br />
@@ -58,7 +67,7 @@ const Kxlu = () => {
           <br />
           <br />
           <br />
-          <span className="bold">01_SFH_KXLU_2017-12-14.vi</span>
+          <span style={{ fontWeight: "bold" }}>01_SFH_KXLU_2017-12-14.vi</span>
           <br />
           1. Life and Time - Austin Green
           <br />
@@ -71,7 +80,7 @@ const Kxlu = () => {
           5. F-15 - Six Finger Hand
           <br />
           <br />
-          <span className="bold">02_SFH_KXLU_2017-12-14.vi</span>
+          <span style={{ fontWeight: "bold" }}>02_SFH_KXLU_2017-12-14.vi</span>
           <br />
           1. Kits - Super-16
           <br />
@@ -86,7 +95,7 @@ const Kxlu = () => {
           6. On The Sunny Side of the Volcano - Super-16
           <br />
           <br />
-          <span className="bold">03_SFH_KXLU_2017-12-14.vi</span>
+          <span style={{ fontWeight: "bold" }}>03_SFH_KXLU_2017-12-14.vi</span>
           <br />
           1. Time - Ipsum Caballum
           <br />
@@ -101,7 +110,9 @@ const Kxlu = () => {
           6. Anessas - Super-16
           <br />
           <br />
-          <span className="bold">04_SFH_KW_2018-01-23.vi (20:38)</span>
+          <span style={{ fontWeight: "bold" }}>
+            04_SFH_KW_2018-01-23.vi (20:38)
+          </span>
           <br />
           1. Handling Acid - Ipsum Caballum
           <br />
@@ -124,7 +135,7 @@ const Kxlu = () => {
           VI_012
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:
@@ -136,6 +147,7 @@ const Kxlu = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

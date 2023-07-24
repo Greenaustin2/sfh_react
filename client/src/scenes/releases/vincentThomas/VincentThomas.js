@@ -1,22 +1,35 @@
 import StreamingIcons from "../../../components/StreamingIcons";
-import albumCoverOne from "./vt-cover.jpg";
-import albumCoverTwo from "./vt-cover-full.jpg";
-import albumCoverThree from "./vt-cover2.png";
-import albumCoverFour from "./vt-cover3.png";
+import albumCover1 from "./vt-cover.jpg";
+import albumCover2 from "./vt-cover-full.jpg";
+import albumCover3 from "./vt-cover2.png";
+import albumCover4 from "./vt-cover3.png";
 import posters from "./posters.jpg";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const VincentThomas = () => {
+const VincentThomas = (props) => {
+  const sources = [
+    albumCover2,
+    albumCover3,
+    albumCover4,
+    posters,
+    "https://youtu.be/HgVYq-RAPw4",
+  ];
+  const types = ["image", "image", "image", "image", "youtube"];
   return (
-    <div className="content" id="tmdovt">
-      <div className="content-top">
+    <div className={s.content} id="tmdovt">
+      <div className={s.contentTop}>
         <h2>The Many Deaths of Vincent Thomas</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover" id="album-art" src={albumCoverOne} />
-
-        {/* https://youtu.be/HgVYq-RAPw4 */}
+      <div className={s.contentLeft}>
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Between April and June of 2016, an upwards of 300 videos were
           published to the internet and subsequently deleted by June 8th. They
@@ -38,7 +51,7 @@ const VincentThomas = () => {
           <br />
           <br />
         </p>
-        <p id="red">
+        <p style={{ color: "red" }}>
           <a
             href="https://download1073.mediafire.com/hdoywuuo2segWmAlgz4z9HAnxqPtY3oFo4xbAkxtRAI-n8MnfAGF3hnaQM7OQv1SjxerR2dow0FPExz4n_C5_Q1h0V2ZOag1otWXSe1lsOcHw2QhWnf9H1phAyNG80XtQ0N3VtbJmjS_0yK8jCLDjHfsxqp5k6h13PcTGigUu-D6auvM/khvfdg73i0crd9g/THE_MANY_DEATHS_OF_VINCENT_THOMAS.zip"
             id="downloadButton"
@@ -50,7 +63,7 @@ const VincentThomas = () => {
         </p>
       </div>
 
-      <div className="content-bottom">
+      <div className={s.contentRight}>
         <StreamingIcons
           urls={{
             spotify:
@@ -62,6 +75,7 @@ const VincentThomas = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

@@ -1,28 +1,30 @@
+import s from "../../css/content.module.css";
+
 const Apartamento = () => {
   return (
-    <div className="content" id="apt">
-      <div className="content-top">
+    <div className={s.content} id="apt">
+      <div className={s.contentTop}>
         <h2>Apartamento</h2>
       </div>
-      <div className="content-left">
-        <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             title="vimeo player"
             src="https://player.vimeo.com/video/560310218?h=e1e989406e"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
+            // style={{
+            //   position: "absolute",
+            //   top: 0,
+            //   left: 0,
+            //   width: "98%",
+            //   height: "98%",
+            // }}
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Tabboo! A short film by{" "}
           <a
@@ -51,7 +53,7 @@ const Apartamento = () => {
           from an uptight artworld.
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <br />
         <p>
           Original score by Six Finger Hand

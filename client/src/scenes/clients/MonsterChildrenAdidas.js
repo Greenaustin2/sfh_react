@@ -1,11 +1,13 @@
+import s from "../../css/content.module.css";
+
 const About = () => {
   return (
-    <div className="content" id="mcad">
-      <div className="content-top">
+    <div className={s.content} id="mcad">
+      <div className={s.contentTop}>
         <h2>Monster Children x Adidas</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             className="youtube-video"
             width="560"
@@ -18,7 +20,7 @@ const About = () => {
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Featuring the adidas Skateboarding team in Tokyo during the Skate Copa
           Classics event and rolled around the streets with Alec Majerus, Silas
@@ -34,7 +36,7 @@ const About = () => {
           <br />
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <p>
           <br />
           Original score by Six Finger Hand

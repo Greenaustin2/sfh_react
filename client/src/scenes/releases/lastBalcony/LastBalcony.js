@@ -1,20 +1,32 @@
-import albumCoverOne from "./lb-cover1.jpg";
-import albumCoverTwo from "./lb-cover2.jpg";
-import albumCoverThree from "./lb-cover3.jpg";
+import albumCover1 from "./lb-cover1.jpg";
+import albumCover2 from "./lb-cover2.jpg";
+import albumCover3 from "./lb-cover3.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const LastBalcony = () => {
+const LastBalcony = (props) => {
+  const sources = [
+    albumCover1,
+    albumCover2,
+    albumCover3,
+    "https://youtu.be/KAzqNZbTHvg",
+  ];
+  const types = ["image", "image", "image", "youtube"];
   return (
-    <div className="content" id="lb">
-      <div className="content-top">
+    <div className={s.content} id="lb">
+      <div className={s.contentTop}>
         <h2>Last Balcony</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover art" id="album-art" src={albumCoverOne} />
-
-        {/* https://youtu.be/KAzqNZbTHvg */}
+      <div className={s.contentLeft}>
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           An improvised digital conversation. Recorded live on a balcony.
           <br />
@@ -70,7 +82,7 @@ const LastBalcony = () => {
           VI_010
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:
@@ -82,6 +94,7 @@ const LastBalcony = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

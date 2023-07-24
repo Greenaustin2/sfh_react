@@ -25,10 +25,10 @@ const CustomContent = React.forwardRef(function CustomContent(props, ref) {
   } = props;
 
   const {
-    disabled,
-    expanded,
-    selected,
-    focused,
+    // disabled,
+    // expanded,
+    // selected,
+    // focused,
     handleExpansion,
     handleSelection,
     preventSelection,
@@ -138,7 +138,7 @@ const DataTreeView = ({ treeDataList }) => {
         aria-label="icon expansion"
         defaultCollapseIcon={<ExpandMoreIcon />}
         defaultExpandIcon={<ChevronRightIcon />}
-        sx={{ height: 240, flexGrow: 1, maxWidth: 400, position: "relative" }}
+        // sx={{ height: 240, flexGrow: 1, maxWidth: 400, position: "relative" }}
       >
         {getTreeItemsFromData(treeDataList)}
       </TreeView>

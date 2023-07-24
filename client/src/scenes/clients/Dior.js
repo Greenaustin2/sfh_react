@@ -1,23 +1,24 @@
+import s from "../../css/content.module.css";
+
 const Dior = () => {
   return (
-    <div className="content" id="dior">
-      <div className="content-top">
+    <div className={s.content} id="dior">
+      <div className={s.contentTop}>
         <h2>Dior</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             width="560"
             height="315"
             src="https://www.youtube.com/embed/Q16yd0iVd30"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           In this transporting behind-the-scenes film of different shoots for
           Dior Magazine No.36, entitled "From Dior to Greece", immerse yourself
@@ -28,7 +29,7 @@ const Dior = () => {
           photographers who collaborated on the project.
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <p>
           <br />
           Original score from Six Finger Hand

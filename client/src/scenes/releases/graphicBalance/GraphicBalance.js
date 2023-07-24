@@ -1,11 +1,14 @@
+import s from "../../../css/content.module.css";
+import construction from "../../../images/other/construction.png";
+
 const GraphicBalance = () => {
   return (
-    <div className="content" id="gb">
-      <div className="content-top">
+    <div className={s.content} id="gb">
+      <div className={s.contentTop}>
         <h2>Graphic Balance</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             width="560"
             height="315"
@@ -17,24 +20,24 @@ const GraphicBalance = () => {
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           An alternative video feed, currently under construction.
           <br />
           <br />
           <img
-            className="construction"
-            src="images/construction.png"
-            alt="cone image"
+            style={{ width: "40px", height: "auto" }}
+            src={construction}
+            alt="construction cone"
           />
           <br />
           <br />
-          <span className="red">Coming Soon</span>
+          <span style={{ color: "red" }}>Coming Soon</span>
           <br />
           VI_005
         </p>
       </div>
-      <div className="content-bottom"></div>
+      <div className={s.contentBottom}></div>
     </div>
   );
 };

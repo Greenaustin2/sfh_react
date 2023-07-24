@@ -1,22 +1,37 @@
-import albumCoverOne from "./mfh-cover.jpg";
+import albumCover1 from "./mfh-cover.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const MusicForHawaii = () => {
+const MusicForHawaii = (props) => {
+  const sources = [albumCover1, "https://youtu.be/JwM_2fJvKwg"];
+  const types = ["image", "youtube"];
   return (
-    <div className="content" id="mfh">
-      <div className="content-top">
+    <div className={s.content} id="mfh">
+      <div className={s.contentTop}>
         <h2>Music for Hawaii</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover" id="album-art" src={albumCoverOne} />
-        {/* https://youtu.be/JwM_2fJvKwg */}
+      <div className={s.contentLeft}>
+        <img
+          alt="album cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Part 3/3 of an original score for a film series by{" "}
-          <a href="https://www.megastrata.com/">Matt Payne</a>.<br />
+          <a
+            href="https://www.megastrata.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Matt Payne
+          </a>
+          .<br />
           <br />
-          <span className="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_Toaster
           <br />
@@ -33,7 +48,7 @@ const MusicForHawaii = () => {
           VI_003
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:
@@ -45,6 +60,7 @@ const MusicForHawaii = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

@@ -1,18 +1,26 @@
-import albumCoverOne from "./ifs-cover.jpg";
-import albumCoverTwo from "./ifs-banner.jpg";
-
+import albumCover1 from "./ifs-cover.jpg";
+import albumCover2 from "./ifs-banner.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const IdeasForSongs = () => {
+const IdeasForSongs = (props) => {
+  const sources = [albumCover1, albumCover2, "https://youtu.be/72uWZKKZG6k"];
+  const types = ["image", "image", "youtube"];
   return (
-    <div className="content" id="ifs">
-      <div className="content-top">
+    <div className={s.content} id="ifs">
+      <div className={s.contentTop}>
         <h2>Ideas for Songs</h2>
       </div>
-      <div className="content-left">
-        <img id="album-art" src={albumCoverOne} />
+      <div className={s.contentLeft}>
+        <img
+          id={s.albumArt}
+          src={albumCover1}
+          alt="cover"
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           A collection of music by{" "}
           <a
@@ -24,7 +32,7 @@ const IdeasForSongs = () => {
           </a>
           .<br />
           <br />
-          <span className="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_Suite 405
           <br />
@@ -42,16 +50,19 @@ const IdeasForSongs = () => {
           VI_008
         </p>
       </div>
-      <StreamingIcons
-        urls={{
-          spotify:
-            "https://open.spotify.com/album/2CYVQNB81LPZDNqeLEPSPh?si=8czvthqeQ0e9b0PbnwhRZA",
-          youtubeMusic:
-            "https://music.youtube.com/playlist?list=OLAK5uy_lZyt-7mCk235cJHWLcMCQsWt-vVbHBxY8&feature=share",
-          appleMusic:
-            "https://music.apple.com/us/album/ideas-for-songs/1212644721",
-        }}
-      />
+      <div className={s.contentBottom}>
+        <StreamingIcons
+          urls={{
+            spotify:
+              "https://open.spotify.com/album/2CYVQNB81LPZDNqeLEPSPh?si=8czvthqeQ0e9b0PbnwhRZA",
+            youtubeMusic:
+              "https://music.youtube.com/playlist?list=OLAK5uy_lZyt-7mCk235cJHWLcMCQsWt-vVbHBxY8&feature=share",
+            appleMusic:
+              "https://music.apple.com/us/album/ideas-for-songs/1212644721",
+          }}
+        />
+      </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

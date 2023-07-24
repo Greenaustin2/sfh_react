@@ -1,23 +1,28 @@
-import flagImage from "./deconstructed-flag1.jpg";
+import flagImage1 from "./deconstructed-flag1.jpg";
 import s from "../../../css/content.module.css";
+import { useState } from "react";
+import Lightbox from "../../../components/Lightbox";
 
 // import flagImage2 from "../images/009-deconstructed-flag/deconstructed-flag2.jpg";
 
-const DeconstructedFlag = () => {
+const DeconstructedFlag = (props) => {
+  // const [toggle, setToggle] = useState(false);
+  const sources = [flagImage1];
+  const types = ["image"];
   return (
-    <div className="content" id="df">
-      <div className="content-top">
+    <div className={s.content} id="df">
+      <div className={s.contentTop}>
         <h2>Deconstructed Flag</h2>
       </div>
-      <div className="content-left">
-        <a
-          data-fslightbox="df"
-          href="images/009_deconstructed-flag/deconstructed-flag1.jpg"
-        >
-          <img id="album-art" src={flagImage} />
-        </a>
+      <div className={s.contentLeft}>
+        <img
+          id={s.albumArt}
+          alt="flag"
+          src={flagImage1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Risograph Print, 11 x 14.25 in
           <br />
@@ -42,10 +47,11 @@ const DeconstructedFlag = () => {
           VI-009
           <br />
           <br />
-          <em className="red">SOLD OUT</em>
+          <em style={{ color: "red" }}>SOLD OUT</em>
         </p>
       </div>
-      <div className="content-bottom"></div>
+      <div className={s.contentBottom}></div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

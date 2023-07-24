@@ -1,28 +1,40 @@
-import neuliOne from "./neuli-1.jpg";
-import neuliTwo from "./neuli-2.jpg";
-import neuliThree from "./neuli-3.jpg";
-import neuliFour from "./neuli-4.jpg";
-import neuliFive from "./neuli-5.jpg";
+import neuli1 from "./neuli-1.jpg";
+import neuli2 from "./neuli-2.jpg";
+import neuli3 from "./neuli-3.jpg";
+import neuli4 from "./neuli-4.jpg";
+import neuli5 from "./neuli-5.jpg";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const Neuli = () => {
+const Neuli = (props) => {
+  const sources = [neuli1, neuli2, neuli3, neuli4, neuli5];
+  const types = Array(5).fill("image");
   return (
-    <div className="content" id="nli">
-      <div className="content-top">
+    <div className={s.content} id="nli">
+      <div className={s.contentTop}>
         <h2>NEULI</h2>
       </div>
-      <div className="content-left">
-        <img alt="book cover" id="album-art" src={neuliOne} />
+      <div className={s.contentLeft}>
+        <img
+          alt="book cover"
+          id={s.albumArt}
+          src={neuli1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
-          NEULI re-contextualizes images from a common packaging and sales
-          catalog known as ULINE.
+          <span style={{ fontWeight: "bold" }}>NEULI</span> re-contextualizes
+          images from a common packaging and sales catalog known as ULINE.
           <br />
           It acts as an ode to Marcel Duchamp and the readymade in modern
           context.
           <br />
           <br />
-          Jayson Payne, 2016
+          <a href="https://jaysonpayne.com/" target="_blank" rel="noreferrer">
+            Jayson Payne
+          </a>
+          , 2016
           <br />
           30 Pages, 4.25 X 5.5 in
           <br />
@@ -33,7 +45,8 @@ const Neuli = () => {
           <br />
         </p>
       </div>
-      <div className="content-bottom"></div>
+      <div className={s.contentBottom}></div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

@@ -1,19 +1,29 @@
-import albumCoverOne from "./ext-front.jpg";
-import albumCoverTwo from "./ext-back.jpg";
+import albumCover1 from "./ext-front.jpg";
+import albumCover2 from "./ext-back.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
 
-const Exeter = () => {
+import s from "../../../css/content.module.css";
+
+const Exeter = (props) => {
+  const sources = [albumCover1, albumCover2];
+  const types = ["image", "image"];
   return (
-    <div className="content" id="ext">
-      <div className="content-top">
+    <div className={s.content} id="ext">
+      <div className={s.contentTop}>
         <h2>Exeter (unfinished randoms)</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover" id="album-art" src={albumCoverOne} />
+      <div className={s.contentLeft}>
+        <img
+          alt="album cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
-          <span className="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_Day II
           <br />
@@ -56,16 +66,19 @@ const Exeter = () => {
           VI_015
         </p>
       </div>
-      <StreamingIcons
-        urls={{
-          spotify:
-            "https://open.spotify.com/album/7ad9Hb1fnnck2NfP3mrmRL?si=qvQfdUxxSGWuMO0wTzr_SQ",
-          youtubeMusic:
-            "https://music.youtube.com/playlist?list=OLAK5uy_l2WLyeVjhCbemnqk1kBFIFAOztH09f108&feature=share",
-          appleMusic:
-            "https://music.apple.com/us/album/exeter-unfinished-randoms/1690212646",
-        }}
-      />
+      <div className={s.contentBottom}>
+        <StreamingIcons
+          urls={{
+            spotify:
+              "https://open.spotify.com/album/7ad9Hb1fnnck2NfP3mrmRL?si=qvQfdUxxSGWuMO0wTzr_SQ",
+            youtubeMusic:
+              "https://music.youtube.com/playlist?list=OLAK5uy_l2WLyeVjhCbemnqk1kBFIFAOztH09f108&feature=share",
+            appleMusic:
+              "https://music.apple.com/us/album/exeter-unfinished-randoms/1690212646",
+          }}
+        />
+      </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

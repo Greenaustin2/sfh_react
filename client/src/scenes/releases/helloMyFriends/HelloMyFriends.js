@@ -8,28 +8,37 @@ import hmf6 from "./hmf-6.jpg";
 import hmf7 from "./hmf-7.jpg";
 import hmf8 from "./hmf-8.jpg";
 import hmf9 from "./hmf-9.jpg";
-import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const HelloMyFriends = () => {
+const HelloMyFriends = (props) => {
+  const sources = [hmf1, hmf2, hmf3, hmf4, hmf5, hmf6, hmf7, hmf8, hmf9];
+  const types = Array(9).fill("image");
   return (
-    <div class="content" id="hmf">
-      <div className="content-top">
+    <div class={s.content} id="hmf">
+      <div className={s.contentTop}>
         <h2>Hello My Friends</h2>
       </div>
-      <div className="content-left">
-        <img id="album-art" src={hmfCover} />
+      <div className={s.contentLeft}>
+        <img
+          id={s.albumArt}
+          src={hmfCover}
+          alt="cover"
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           A found footage chronicle of youth, drug abuse, viral culture, self
           worth, and identity in the armpit of America.
           <br />
           <br />
-          <span className="red">Coming soon.</span>
+          <span style={{ color: "red" }}>Coming soon.</span>
           <br />
           VI_016
         </p>
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

@@ -1,22 +1,30 @@
+import Lightbox from "../../../components/Lightbox";
 import albumCover from "./com_art.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
 import s from "../../../css/content.module.css";
 
-const CollectionOfMusic = () => {
+const CollectionOfMusic = (props) => {
+  const sources = [albumCover, "https://youtu.be/1Zz3YMT2HQc"];
+  const types = ["image", "youtube"];
   return (
     <div className={s.content} id="com">
       <div className={s.contentTop}>
         <h2>Collection of Music</h2>
       </div>
       <div className={s.contentLeft}>
-        <img alt="album cover" id={s.albumArt} src={albumCover} />
+        <img
+          alt="album cover"
+          id={s.albumArt}
+          src={albumCover}
+          onClick={props.toggleLightbox}
+        />
       </div>
       <div className={s.contentRight}>
         <p>
           13 songs for bass and Rhodes
           <br />
           <br />
-          <span className="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_Ostia
           <br />
@@ -45,7 +53,7 @@ const CollectionOfMusic = () => {
           13_Till Death
           <br />
           <br />
-          <span className="bold">INSTRUMENTATION</span>
+          <span style={{ fontWeight: "bold" }}>INSTRUMENTATION</span>
           <br />
           1980 Rhodes Suitcase 73
           <br />
@@ -59,7 +67,7 @@ const CollectionOfMusic = () => {
           <br />
           VI_014
         </p>
-      </div>
+      </div>{" "}
       <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
@@ -72,6 +80,7 @@ const CollectionOfMusic = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

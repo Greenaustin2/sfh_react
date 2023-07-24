@@ -162,6 +162,10 @@ a:hover {
   color: #335be1;
 }
 
+.fslightbox-slide-number-container {
+  display: none !important;
+}
+
 @media (max-width: 578px) {
   body {
     min-height: 100vh;
@@ -231,11 +235,12 @@ a:hover {
     padding: 60px 20px 20px 40px;
     /* overflow-y: visible; */
     /* border: solid black; */
-
+    height: 100%;
     grid-row: 2;
+    overflow: auto;
   }
   .innerLeft {
-    position: absolute;
+    position: relative;
     left: 70px;
     top: 20px;
     /* border: solid green; */

@@ -1,16 +1,24 @@
-import albumCoverOne from "./wpb-cover1.jpg";
-import albumCoverTwo from "./wpb-cover2.jpg";
+import albumCover1 from "./wpb-cover1.jpg";
+import albumCover2 from "./wpb-cover2.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
 import s from "../../../css/content.module.css";
 
-const WatchedPot = () => {
+const WatchedPot = (props) => {
+  const sources = [albumCover1, albumCover2];
+  const types = ["image", "image"];
   return (
     <div className={s.content} id="wpb">
       <div className={s.contentTop}>
-        <h2 className="stretch">Watched Pot Boils</h2>
+        <h2>Watched Pot Boils</h2>
       </div>
       <div className={s.contentLeft}>
-        <img alt="album cover" id={s.albumArt} src={albumCoverOne} />
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
       <div className={s.contentRight}>
         <p>
@@ -45,7 +53,7 @@ const WatchedPot = () => {
           <br />
           Cast iron pan
           <br />
-          Br /oom
+          Broom
           <br />
           Arborio rice
           <br />
@@ -72,6 +80,7 @@ const WatchedPot = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

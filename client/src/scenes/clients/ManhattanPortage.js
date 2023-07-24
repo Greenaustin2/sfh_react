@@ -1,11 +1,13 @@
+import s from "../../css/content.module.css";
+
 const ManhattanPortage = () => {
   return (
-    <div className="content" id="mp">
-      <div className="content-top">
+    <div className={s.content} id="mp">
+      <div className={s.contentTop}>
         <h2>Manhattan Portage</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             width="560"
             height="315"
@@ -17,7 +19,7 @@ const ManhattanPortage = () => {
           ></iframe>
         </div>
         <br />
-        <div className="video-container">
+        <div className={s.videoContainer}>
           <iframe
             width="560"
             height="315"
@@ -29,7 +31,7 @@ const ManhattanPortage = () => {
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           <a
             href="https://www.manhattanportage.com/?gclid=Cj0KCQjwiZqhBhCJARIsACHHEH_jUo1yThZMBVZGffcIwTARuz9gh0r9psuZFlGni5f8lhepI_Y14vQaAm6pEALw_wcB"
@@ -60,7 +62,7 @@ const ManhattanPortage = () => {
           </a>
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <p>
           <br />
           Original score by Six Finger Hand

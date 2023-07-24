@@ -1,18 +1,25 @@
-import albumCoverOne from "./mfe-cover.jpg";
+import albumCover1 from "./mfe-cover.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const MusicForEurope = () => {
+const MusicForEurope = (props) => {
+  const sources = [albumCover1, "https://youtu.be/48pJt2vByGk"];
+  const types = ["image", "youtube"];
   return (
-    <div className="content" id="mfe">
-      <div className="content-top">
+    <div className={s.content} id="mfe">
+      <div className={s.contentTop}>
         <h2>Music for Europe</h2>
       </div>
-      <div className="content-left">
-        <img alt="albumCover" id="album-art" src={albumCoverOne} />
-
-        {/* https://youtu.be/48pJt2vByGk */}
+      <div className={s.contentLeft}>
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Part 1/3 of an original score for a film series by{" "}
           <a
@@ -24,7 +31,7 @@ const MusicForEurope = () => {
           </a>
           .<br />
           <br />
-          <span className="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_Maxwell's Demon
           <br />
@@ -42,7 +49,7 @@ const MusicForEurope = () => {
           VI_001
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:
@@ -54,6 +61,7 @@ const MusicForEurope = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

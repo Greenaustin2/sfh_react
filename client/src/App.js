@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import headerLogo from "./images/logos/full_logo.png";
 import footerLogo from "./images/logos/sflogo.png";
 import BarTreeView from "./components/navMenu";
@@ -6,6 +6,8 @@ import ContentRoutes from "./components/contentRoutes";
 import s from "./css/global.module.css";
 
 const App = () => {
+  const [toggle, setToggle] = useState(false);
+  const toggleLightbox = () => setToggle(!toggle);
   return (
     <div className={s.container}>
       <div className={s.top}>
@@ -17,7 +19,7 @@ const App = () => {
         <BarTreeView />
       </div>
       <div className={s.centerRight}>
-        <ContentRoutes />
+        <ContentRoutes toggle={toggle} toggleLightbox={toggleLightbox} />
       </div>
       <div className={s.bottom}>
         <a href="/" className={s.imageLink}>

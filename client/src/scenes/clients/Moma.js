@@ -1,11 +1,13 @@
+import s from "../../css/content.module.css";
+
 const Moma = () => {
   return (
-    <div className="content" id="moma">
-      <div className="content-top">
+    <div className={s.content} id="moma">
+      <div className={s.contentTop}>
         <h2>MoMA</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             width="560"
             height="315"
@@ -17,7 +19,7 @@ const Moma = () => {
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Architect{" "}
           <a href="https://linktr.ee/jo.hwang" target="_blank" rel="noreferrer">
@@ -42,7 +44,7 @@ const Moma = () => {
           otherwise capture a wide variety of practices and backgrounds.
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <p>
           <br />
           Original score by Six Finger Hand

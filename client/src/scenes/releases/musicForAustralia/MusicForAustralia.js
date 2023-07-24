@@ -1,18 +1,25 @@
-import albumCoverOne from "./mfa-cover.jpg";
+import albumCover1 from "./mfa-cover.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const MusicForAustralia = () => {
+const MusicForAustralia = (props) => {
+  const sources = [albumCover1, "https://youtu.be/4236m_pr8UQ"];
+  const types = ["image", "youtube"];
   return (
-    <div class="content" id="mfa">
-      <div class="content-top">
+    <div class={s.content} id="mfa">
+      <div class={s.contentTop}>
         <h2>Music for Australia</h2>
       </div>
-      <div class="content-left">
-        <img alt="album cover" id="album-art" src={albumCoverOne} />
-
-        {/* https://youtu.be/4236m_pr8UQ */}
+      <div class={s.contentLeft}>
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div class="content-right">
+      <div class={s.contentRight}>
         <p>
           Part 2/3 of an original score for a film series by{" "}
           <a
@@ -24,7 +31,7 @@ const MusicForAustralia = () => {
           </a>
           .<br />
           <br />
-          <span class="bold">TRACKLIST</span>
+          <span style={{ fontWeight: "bold" }}>TRACKLIST</span>
           <br />
           01_As It Came To Be
           <br />
@@ -46,7 +53,7 @@ const MusicForAustralia = () => {
           VI_003
         </p>
       </div>
-      <div class="content-bottom">
+      <div class={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:
@@ -58,6 +65,7 @@ const MusicForAustralia = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

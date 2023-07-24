@@ -1,23 +1,37 @@
-import albumCoverOne from "./tp-cover1.jpg";
-import albumCoverTwo from "./tp-cover2.jpg";
+import albumCover1 from "./tp-cover1.jpg";
+import albumCover2 from "./tp-cover2.jpg";
 import StreamingIcons from "../../../components/StreamingIcons";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const Transpositions = () => {
+const Transpositions = (props) => {
+  const sources = [
+    albumCover1,
+    albumCover2,
+    "https://youtu.be/q9GWTbEG0bU",
+    "https://youtu.be/AEkqrfeAHQk",
+  ];
+  const types = ["image", "image", "youtube", "youtube"];
   return (
-    <div className="content" id="tps">
-      <div className="content-top">
+    <div className={s.content} id="tps">
+      <div className={s.contentTop}>
         <h2>TRANSPOSITIONS</h2>
       </div>
-      <div className="content-left">
-        <img alt="album cover" id="album-art" src={albumCoverOne} />
+      <div className={s.contentLeft}>
+        <img
+          alt="cover"
+          id={s.albumArt}
+          src={albumCover1}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           An 8 track album incorporating the saxophone shifting through
           different styles and ideas from our affiliates.
           <br />
           <br />
-          <span className="bold">Personnel</span>:<br />
+          <span style={{ fontWeight: "bold" }}>Personnel</span>:<br />
           01_Gas Giant (Matt Payne)
           <br />
           02_Vague Language (Modal, Matt Payne)
@@ -40,7 +54,7 @@ const Transpositions = () => {
           VI_007
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:
@@ -52,6 +66,7 @@ const Transpositions = () => {
           }}
         />
       </div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

@@ -1,15 +1,24 @@
 import cardImage from "./sfcard.png";
+import Lightbox from "../../../components/Lightbox";
+import s from "../../../css/content.module.css";
 
-const PlayingCard = () => {
+const PlayingCard = (props) => {
+  const sources = [cardImage];
+  const types = ["image"];
   return (
-    <div className="content" id="sfc">
-      <div className="content-top">
+    <div className={s.content} id="sfc">
+      <div className={s.contentTop}>
         <h2>SFH 52</h2>
       </div>
-      <div className="content-left">
-        <img alt="playing card" id="album-art" src={cardImage} />
+      <div className={s.contentLeft}>
+        <img
+          alt="playing card"
+          id={s.albumArt}
+          src={cardImage}
+          onClick={props.toggleLightbox}
+        />
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           Deck of 52 playing cards.
           <br />
@@ -19,7 +28,8 @@ const PlayingCard = () => {
           VI_000
         </p>
       </div>
-      <div className="content-bottom"></div>
+      <div className={s.contentBottom}></div>
+      <Lightbox sources={sources} types={types} toggle={props.toggle} />
     </div>
   );
 };

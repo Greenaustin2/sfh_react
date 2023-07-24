@@ -1,11 +1,13 @@
+import s from "../../css/content.module.css";
+
 const NewSchool = () => {
   return (
-    <div className="content" id="ns">
-      <div className="content-top">
+    <div className={s.content} id="ns">
+      <div className={s.contentTop}>
         <h2>The New School</h2>
       </div>
-      <div className="content-left">
-        <div className="video-container">
+      <div className={s.contentLeft}>
+        <div className={s.videoContainer}>
           <iframe
             className="youtube-video"
             width="560"
@@ -18,7 +20,7 @@ const NewSchool = () => {
           ></iframe>
         </div>
       </div>
-      <div className="content-right">
+      <div className={s.contentRight}>
         <p>
           At Parsons, Ani has gained digital skills in an urban setting in which
           he can take his drawing—and personal and professional aspirations—to
@@ -32,7 +34,7 @@ const NewSchool = () => {
           perspective on life and his future.
         </p>
       </div>
-      <div className="content-bottom">
+      <div className={s.contentBottom}>
         <p>
           <br />
           Original score by Six Finger Hand

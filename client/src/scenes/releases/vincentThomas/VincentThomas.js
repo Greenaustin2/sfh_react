@@ -63,7 +63,7 @@ const VincentThomas = (props) => {
         </p>
       </div>
 
-      <div className={s.contentRight}>
+      <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
             spotify:

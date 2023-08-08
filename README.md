@@ -6,11 +6,11 @@
 
 sixfingerhand.xyz is a portfolio website for multimedia arts collective Six Finger Hand. The website was modeled after the hierarchical structure of common local file browser windows.
 
-![screen shot one](../assets/screen_shot_one.png?raw=true)
+![screen shot one](../assets/screen_shot_1.png?raw=true)
 
-![screen shot two](../assets/screen_shot_two.png?raw=true)
+![screen shot two](../assets/screen_shot_2.png?raw=true)
 
-![screen shot three](../assets/screen_shot_three.png?raw=true)
+![screen shot three](../assets/screen_shot_3.png?raw=true)
 
 ## Tech Stack
 

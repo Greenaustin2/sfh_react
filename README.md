@@ -31,4 +31,5 @@ sixfingerhand.xyz is a straightforward web application utilizing create-react-ap
 ## Future Functionality
 
 -Web store and payment integration
+
 -Working with designer on updated styling and UI

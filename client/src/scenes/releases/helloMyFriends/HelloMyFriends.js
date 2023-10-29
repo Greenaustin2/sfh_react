@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import dropbox from "../../../utils/dropbox";
 import cover1 from "./front_final.jpg";
 import cover2 from "./back_final.jpg";
 import filmCover from "./film_cover_ascii.jpg";
@@ -16,6 +18,8 @@ import Lightbox from "../../../components/Lightbox";
 import s from "../../../css/content.module.css";
 
 const HelloMyFriends = (props) => {
+  const [email, setEmail] = useState("");
+
   const sources = [
     filmCover,
     "https://youtu.be/XWPHrZOmHd4?si=O3a1fTUxsI4T0JCV",
@@ -34,8 +38,14 @@ const HelloMyFriends = (props) => {
   const types = Array(11).fill("image");
   types.unshift("youtube");
   types.unshift("image");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await dropbox(email);
+    setEmail("");
+  };
   return (
-    <div class={s.content} id="hmf">
+    <div className={s.content} id="hmf">
       <div className={s.contentTop}>
         <h2>Hello My Friends</h2>
       </div>
@@ -57,6 +67,15 @@ const HelloMyFriends = (props) => {
           <br />
           VI_016
         </p>
+        <p></p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <input type="submit" value="submit"></input>
+        </form>
       </div>
       <div className={s.contentBottom}>
         <StreamingIcons

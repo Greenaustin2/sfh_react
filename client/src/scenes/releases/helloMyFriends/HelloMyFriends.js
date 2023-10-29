@@ -50,7 +50,7 @@ const HelloMyFriends = (props) => {
       <div className={s.contentRight}>
         <p>
           A found footage chronicle of youth, drug abuse, self worth, and
-          identity in the armpit of America.
+          identity in modern America.
           <br />
           <br />
           <span style={{ color: "red" }}>Coming soon.</span>

@@ -21,8 +21,8 @@ const HelloMyFriends = (props) => {
   const [email, setEmail] = useState("");
 
   const sources = [
-    filmCover,
-    "https://youtu.be/XWPHrZOmHd4?si=O3a1fTUxsI4T0JCV",
+    // filmCover,
+    // "https://youtu.be/XWPHrZOmHd4?si=O3a1fTUxsI4T0JCV",
     cover1,
     cover2,
     hmf1,
@@ -36,8 +36,8 @@ const HelloMyFriends = (props) => {
     hmf9,
   ];
   const types = Array(11).fill("image");
-  types.unshift("youtube");
-  types.unshift("image");
+  // types.unshift("youtube");
+  // types.unshift("image");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -52,7 +52,7 @@ const HelloMyFriends = (props) => {
       <div className={s.contentLeft}>
         <img
           id={s.albumArt}
-          src={filmCover}
+          src={cover1}
           alt="cover"
           onClick={props.toggleLightbox}
         />
@@ -63,26 +63,32 @@ const HelloMyFriends = (props) => {
           identity in rural America.
           <br />
           <br />
-          <span style={{ color: "red" }}>Coming soon.</span>
+          OST streaming everywhere.
+          <br />
+          <br />
+          <span style={{ color: "red" }}>Film coming soon.</span>
           <br />
           VI_016
         </p>
         <p></p>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
           <input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <input type="submit" value="submit"></input>
-        </form>
+        </form> */}
       </div>
       <div className={s.contentBottom}>
         <StreamingIcons
           urls={{
-            spotify: "",
-            youtubeMusic: "",
-            appleMusic: "",
+            spotify:
+              "https://open.spotify.com/album/5yBLjNzMUL200NHztYNlJG?si=AHHMTHR-SJuJWhYIA7JH5A",
+            youtubeMusic:
+              "https://music.youtube.com/playlist?list=OLAK5uy_mYGFJuptMLUt8btLfXlUrBZD8xcW4Tq-o&si=pgZpSXilSc0nRIb5",
+            appleMusic:
+              "https://music.apple.com/us/album/hello-my-friends/1714521912",
           }}
         />
       </div>

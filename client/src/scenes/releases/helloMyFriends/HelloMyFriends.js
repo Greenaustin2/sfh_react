@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import dropbox from "../../../utils/dropbox";
+// import dropbox from "../../../utils/dropbox";
 import cover1 from "./front_final.jpg";
 import cover2 from "./back_final.jpg";
 import filmCover from "./film_cover_ascii.jpg";
@@ -18,7 +18,7 @@ import Lightbox from "../../../components/Lightbox";
 import s from "../../../css/content.module.css";
 
 const HelloMyFriends = (props) => {
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
 
   const sources = [
     // filmCover,
@@ -39,11 +39,11 @@ const HelloMyFriends = (props) => {
   // types.unshift("youtube");
   // types.unshift("image");
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    await dropbox(email);
-    setEmail("");
-  };
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   await dropbox(email);
+  //   setEmail("");
+  // };
   return (
     <div className={s.content} id="hmf">
       <div className={s.contentTop}>

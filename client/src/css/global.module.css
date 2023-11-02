@@ -19,6 +19,7 @@ h1 {
 
 h1:hover {
   color: #cca41e;
+  user-select: none;
 }
 
 h2 {
@@ -29,11 +30,13 @@ h2 {
   font-size: 2rem;
   position: relative;
   margin: 7px 0px 0px 0px;
+  user-select: none;
 }
 
 img {
   height: 200px;
   width: auto;
+  user-select: none;
 }
 
 h4 {
@@ -41,6 +44,7 @@ h4 {
   font-family: "Univers LT Std", sans-serif;
   font-weight: 100;
   font-size: 0.75rem;
+  user-select: none;
 }
 
 p {
@@ -49,6 +53,7 @@ p {
     Bitstream Vera Sans Mono, monospace;
   font-size: 0.75rem;
   margin-top: 0;
+  user-select: none;
 }
 
 a {
@@ -60,6 +65,7 @@ a {
   text-decoration: none;
   transition: all 0.25s ease;
   font-weight: bold;
+  user-select: none;
 }
 
 a:hover {

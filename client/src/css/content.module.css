@@ -51,6 +51,11 @@
   height: 100%;
 }
 
+#linkSeparators {
+  display: inline !important;
+  /* color: red !important; */
+}
+
 #albumArt {
   position: relative;
   max-width: 100%;
@@ -148,6 +153,11 @@
     left: calc(3vw / 2);
   }
 
+  #linkSeparators {
+    display: inline !important;
+    /* color: red !important; */
+  }
+
   #album-art {
     position: relative;
     max-width: 97%;
@@ -213,6 +223,11 @@
     left: 0;
     width: 97%;
     height: 97%;
+  }
+
+  #linkSeparators {
+    display: inline !important;
+    /* color: red !important; */
   }
 
   #albumArt {

@@ -59,7 +59,7 @@ const HelloMyFriends = (props) => {
       </div>
       <div className={s.contentRight}>
         <p>
-          A found footage chronicle of youth, drug abuse, self worth, and
+          A found footage chronicle of youth, drug abuse, self-worth, and
           identity in rural America.
           <br />
           <br />

@@ -22,7 +22,7 @@ const HelloMyFriends = (props) => {
 
   const sources = [
     // filmCover,
-    // "https://youtu.be/XWPHrZOmHd4?si=O3a1fTUxsI4T0JCV",
+    "https://youtu.be/XWPHrZOmHd4",
     cover1,
     cover2,
     hmf1,
@@ -36,7 +36,7 @@ const HelloMyFriends = (props) => {
     hmf9,
   ];
   const types = Array(11).fill("image");
-  // types.unshift("youtube");
+  types.unshift("youtube");
   // types.unshift("image");
 
   // const handleSubmit = async (event) => {
@@ -52,7 +52,7 @@ const HelloMyFriends = (props) => {
       <div className={s.contentLeft}>
         <img
           id={s.albumArt}
-          src={cover1}
+          src={filmCover}
           alt="cover"
           onClick={props.toggleLightbox}
         />
@@ -66,7 +66,7 @@ const HelloMyFriends = (props) => {
           OST streaming everywhere.
           <br />
           <br />
-          <span style={{ color: "red" }}>Film coming soon.</span>
+          <span style={{ color: "red" }}>Short film streaming 11/11.</span>
           <br />
           VI_016
         </p>

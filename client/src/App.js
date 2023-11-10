@@ -4,11 +4,12 @@ import footerLogo from "./images/logos/sflogo.png";
 import BarTreeView from "./components/navMenu";
 import ContentRoutes from "./components/contentRoutes";
 import s from "./css/global.module.css";
-import RouteChangeTracker from "./components/routeChangeTracker";
 
-import ReactGA from "react-ga";
-const TRACKING_ID = "G-BCDW7FS120 "; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+// import RouteChangeTracker from "./components/routeChangeTracker";
+
+// import ReactGA from "react-ga";
+// const TRACKING_ID = "G-BCDW7FS120 "; // OUR_TRACKING_ID
+// ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -31,7 +32,7 @@ const App = () => {
           <img className={s.logoBottom} src={footerLogo} alt="Hand Logo" />
         </a>
       </div>
-      <RouteChangeTracker />
+      {/* <RouteChangeTracker /> */}
     </div>
   );
 };

@@ -5,6 +5,10 @@ import BarTreeView from "./components/navMenu";
 import ContentRoutes from "./components/contentRoutes";
 import s from "./css/global.module.css";
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-BCDW7FS120 "; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 const App = () => {
   const [toggle, setToggle] = useState(false);
   const toggleLightbox = () => setToggle(!toggle);

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 // import dropbox from "../../../utils/dropbox";
 import cover1 from "./front_final.jpg";
 import cover2 from "./back_final.jpg";
+// import filmCover from "./hmf-cover.jpg";
 import filmCover from "./film_cover_ascii.jpg";
 import hmf1 from "./hmf-1.jpg";
 import hmf2 from "./hmf-2.jpg";
@@ -57,7 +58,7 @@ const HelloMyFriends = (props) => {
           onClick={props.toggleLightbox}
         />
       </div>
-      <div className={s.contentRight}>
+      {/* <div className={s.contentRight}>
         <p>
           A found footage chronicle of youth, drug abuse, self-worth, and
           identity in rural America.
@@ -70,16 +71,50 @@ const HelloMyFriends = (props) => {
           <br />
           VI_016
         </p>
-        <p></p>
-        {/* <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <input type="submit" value="submit"></input>
-        </form> */}
+
+      </div> */}
+
+      <div className={s.contentRight}>
+        <p>
+          A found footage chronicle of youth, drug abuse, self-worth, and
+          identity in rural America.
+          <br />
+          <br />
+          <br />
+          We discovered Alexander Alexanderson on Youtube in 2016 via his video
+          entitled “chugging whiskey, fuck the government”. The entirety of his
+          channel’s contents were downloaded and catalogued, all of which has
+          since been removed from the internet. Over the past 7 years this ~90
+          hours of footage has slowly morphed into a cohesive 48 minute short
+          film. We hope you find Alexander as eccentric and outlandish as we
+          did, and still do.
+          <br />
+          <br />
+          <br />
+          <a
+            href="https://download948.mediafire.com/g56a5j1je7ggRnAphjeP-9RTFoX2m_FxvYSatowGtlhSbXyAZgoRTeKf0pLZV2Zb1SZ96jd4FNfv_fn-njALgPvOofzaGrRb7cxxi49qWRmSZpdttH76zTf_h_CYusUNtHCdzFiYt7tO7Himo8Wjb5_h1_syr0HzhJKVicVrR_OR/m5jt696wwb4vvse/hello_my_friends.zip"
+            target="_blank"
+            rel="noreferrer"
+          >
+            DOWNLOAD
+          </a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a
+            href="https://drive.google.com/drive/folders/1kbdP3KS1nasXbCgKpRClpe5B7FeQqybL?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            STREAM
+          </a>
+          <br />
+          <br />
+          <br />
+          Released 11_11_2023
+          <br />
+          VI_016
+        </p>
       </div>
+
       <div className={s.contentBottom}>
         <StreamingIcons
           urls={{

@@ -15,16 +15,31 @@ const StreamingIcons = (urls) => {
     //     <img alt="youtube music icon" id={s.streamingIcon} src={youtubeMusic} />
     //   </a>
     // </div>
-    <div className="content-bottom">
-      <a href={url["spotify"]} target="_blank" rel="noreferrer">
+    <div>
+      <a
+        id={s.streamingIcon}
+        href={url["spotify"]}
+        target="_blank"
+        rel="noreferrer"
+      >
         spotify
       </a>
       <p id={s.linkSeparators}> - </p>
-      <a href={url["appleMusic"]} target="_blank" rel="noreferrer">
+      <a
+        id={s.streamingIcon}
+        href={url["appleMusic"]}
+        target="_blank"
+        rel="noreferrer"
+      >
         apple
       </a>
       <p id={s.linkSeparators}> - </p>
-      <a href={url["youtubeMusic"]} target="_blank" rel="noreferrer">
+      <a
+        id={s.streamingIcon}
+        href={url["youtubeMusic"]}
+        target="_blank"
+        rel="noreferrer"
+      >
         youtube
       </a>
     </div>

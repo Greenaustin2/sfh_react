@@ -51,6 +51,17 @@ const HelloMyFriends = (props) => {
         <h2>Hello My Friends</h2>
       </div>
       <div className={s.contentLeft}>
+        {/* <div className={s.videoContainer}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/sRwYp4F-4lk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div> */}
         <img
           id={s.albumArt}
           src={filmCover}
@@ -105,6 +116,14 @@ const HelloMyFriends = (props) => {
             rel="noreferrer"
           >
             STREAM
+          </a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a
+            href="https://youtu.be/XWPHrZOmHd4?si=LsYKnGuJQmjGTmON"
+            target="_blank"
+            rel="noreferrer"
+          >
+            TRAILER
           </a>
           <br />
           <br />

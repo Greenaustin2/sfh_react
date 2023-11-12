@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import cover1 from "./front_final.jpg";
 import cover2 from "./back_final.jpg";
 // import filmCover from "./hmf-cover.jpg";
-import filmCover from "./film_cover_ascii.jpg";
+import filmCover from "./yt.png";
+
+// import filmCover from "./film_cover_ascii.jpg";
 import hmf1 from "./hmf-1.jpg";
 import hmf2 from "./hmf-2.jpg";
 import hmf3 from "./hmf-3.jpg";

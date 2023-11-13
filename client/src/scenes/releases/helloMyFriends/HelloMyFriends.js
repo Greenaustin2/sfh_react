@@ -119,14 +119,14 @@ const HelloMyFriends = (props) => {
           >
             STREAM
           </a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
+          {/* &nbsp;&nbsp;|&nbsp;&nbsp;
           <a
             href="https://youtu.be/XWPHrZOmHd4?si=LsYKnGuJQmjGTmON"
             target="_blank"
             rel="noreferrer"
           >
             TRAILER
-          </a>
+          </a> */}
           <br />
           <br />
           <br />

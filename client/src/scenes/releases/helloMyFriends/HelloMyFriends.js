@@ -96,7 +96,7 @@ const HelloMyFriends = (props) => {
           <br />
           We discovered Alexander Alexanderson on Youtube in 2016 via his video
           entitled “chugging whiskey, fuck the government”. The entirety of his
-          channel’s contents were downloaded and catalogued, all of which has
+          channel’s contents were downloaded and catalogued, all of which have
           since been removed from the internet. Over the past 7 years this ~90
           hours of footage has slowly morphed into a cohesive 48 minute short
           film. We hope you find Alexander as eccentric and outlandish as we

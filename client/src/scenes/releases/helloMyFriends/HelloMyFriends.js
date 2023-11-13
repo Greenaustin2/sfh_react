@@ -105,7 +105,15 @@ const HelloMyFriends = (props) => {
           <br />
           <br />
           <a
-            href="https://download948.mediafire.com/g56a5j1je7ggRnAphjeP-9RTFoX2m_FxvYSatowGtlhSbXyAZgoRTeKf0pLZV2Zb1SZ96jd4FNfv_fn-njALgPvOofzaGrRb7cxxi49qWRmSZpdttH76zTf_h_CYusUNtHCdzFiYt7tO7Himo8Wjb5_h1_syr0HzhJKVicVrR_OR/m5jt696wwb4vvse/hello_my_friends.zip"
+            href="https://youtu.be/gRCCA5MMXP4"
+            target="_blank"
+            rel="noreferrer"
+          >
+            STREAM
+          </a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a
+            href="https://download948.mediafire.com/9w1i9en979gg9IZDtV7JrP-PSZR1EXpfrEkZdHDvEdPGRQFLlO8hmbACkzLT67d9lrdlufjDwuKFDyRVWGEoObE01eQpPSq_VTWj9rpTrQ-FVSkSa_BpXMpgXI983cVKA4i-w7Ji8P2sq4zxO7Wlx17EyNj7XiD_rkFaJAN_YI_U-A/m5jt696wwb4vvse/hello_my_friends.zip"
             target="_blank"
             rel="noreferrer"
           >
@@ -113,20 +121,12 @@ const HelloMyFriends = (props) => {
           </a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <a
-            href="https://drive.google.com/drive/folders/1kbdP3KS1nasXbCgKpRClpe5B7FeQqybL?usp=sharing"
+            href="https://drive.google.com/drive/folders/1kbdP3KS1nasXbCgKpRClpe5B7FeQqybL?usp=drive_link"
             target="_blank"
             rel="noreferrer"
           >
-            STREAM
+            CLOUD
           </a>
-          {/* &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a
-            href="https://youtu.be/XWPHrZOmHd4?si=LsYKnGuJQmjGTmON"
-            target="_blank"
-            rel="noreferrer"
-          >
-            TRAILER
-          </a> */}
           <br />
           <br />
           <br />

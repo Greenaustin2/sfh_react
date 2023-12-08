@@ -49,7 +49,7 @@ const HelloMyFriends = (props) => {
   // };
   return (
     <div className={s.content} id="hmf">
-      <div className={s.contentTop}>
+      <div className={s.contentTop} id="">
         <h2>Hello My Friends</h2>
       </div>
       <div className={s.contentLeft}>
